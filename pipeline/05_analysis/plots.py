@@ -42,52 +42,66 @@ plt.rcParams.update({
 })
 
 
+def _short_label(model: str, variant: str) -> str:
+    m = (str(model).replace("llama31-", "Llama-").replace("qwen25-", "Qwen-")
+         .replace("bert_base", "BERT").replace("distilbert", "DistilBERT")
+         .replace("mbert", "mBERT").replace("herbert", "HerBERT")
+         .replace("_", " "))
+    v = (str(variant).replace("lora_big", "big-LoRA").replace("lora_basic", "basic-LoRA")
+         .replace("lora_natural", "nat-LoRA").replace("zs_short", "ZS")
+         .replace("finetune", "ft").replace("tfidf", "").replace("text_meta", "").strip())
+    return f"{m} {v}".strip()
+
+
 def pareto_cost_quality(df: pd.DataFrame, dataset: str, output_path: Path) -> None:
     means = df[(df["seed"] == "mean") & (df["dataset"] == dataset)].copy()
     if means.empty or means["ms_per_sample"].isna().all():
         logger.warning("No ms_per_sample for %s — skipping Pareto", dataset)
         return
 
-    fig, ax = plt.subplots(figsize=(6.5, 4.5))
+    from adjustText import adjust_text
+    fig, ax = plt.subplots(figsize=(7.6, 5.0))
     families = means["model"].apply(_family_for_model)
     colors = {"classical": "#22c55e", "encoder": "#3b82f6", "llm": "#ef4444", "ensemble": "#a855f7"}
     markers = {"classical": "o", "encoder": "s", "llm": "^", "ensemble": "D"}
+    fam_pl = {"classical": "klasyczne", "encoder": "enkodery", "llm": "LLM", "ensemble": "ensemble"}
 
+    texts = []
     for fam in colors:
         sub = means[families == fam]
         if sub.empty:
             continue
         ax.scatter(
             sub["ms_per_sample"], sub["f1"],
-            s=80, c=colors[fam], marker=markers[fam], alpha=0.8, label=fam,
-            edgecolors="black", linewidths=0.5,
+            s=80, c=colors[fam], marker=markers[fam], alpha=0.85, label=fam_pl[fam],
+            edgecolors="black", linewidths=0.5, zorder=3,
         )
         for _, row in sub.iterrows():
-            ax.annotate(f"{row['model']}/{row['variant']}",
-                        (row["ms_per_sample"], row["f1"]),
-                        fontsize=7, alpha=0.7, xytext=(3, 3), textcoords="offset points")
+            texts.append(ax.text(row["ms_per_sample"], row["f1"],
+                                 _short_label(row["model"], row["variant"]), fontsize=7))
 
     # Pareto front
     sorted_df = means.sort_values("ms_per_sample")
-    pareto_pts = []
-    best_f1 = -1
+    pareto_pts, best_f1 = [], -1
     for _, row in sorted_df.iterrows():
         if pd.notna(row["f1"]) and row["f1"] > best_f1:
             pareto_pts.append((row["ms_per_sample"], row["f1"]))
             best_f1 = row["f1"]
     if pareto_pts:
         xs, ys = zip(*pareto_pts)
-        ax.plot(xs, ys, "k--", alpha=0.4, lw=1, label="Pareto front")
+        ax.plot(xs, ys, "k--", alpha=0.4, lw=1, label="front Pareto", zorder=2)
 
     ax.set_xscale("log")
-    ax.set_xlabel("Latency (ms / sample, log scale)")
+    ax.set_xlabel("Latencja (ms / próbkę, skala log.)")
     ax.set_ylabel("Macro F1")
     ax.set_title(f"Kompromis koszt-jakość — {dataset}")
-    ax.legend(loc="lower right", framealpha=0.9)
+    # Legenda POZA obszarem wykresu (nie zasłania punktów)
+    ax.legend(loc="center left", bbox_to_anchor=(1.01, 0.5), framealpha=0.95, title="Rodzina")
     ax.grid(alpha=0.3, which="both")
-    fig.tight_layout()
+    adjust_text(texts, ax=ax, only_move={"points": "y", "text": "xy"},
+                arrowprops=dict(arrowstyle="-", color="gray", lw=0.4))
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(output_path)
+    fig.savefig(output_path, bbox_inches="tight")
     plt.close(fig)
     logger.info("Pareto → %s", output_path)
 
