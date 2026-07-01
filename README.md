@@ -1,13 +1,13 @@
 # Disinformation detection — thesis code & artifacts
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21113726.svg)](https://doi.org/10.5281/zenodo.21113726)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21112976.svg)](https://doi.org/10.5281/zenodo.21112976)
 
 Companion code and experimental artifacts for the M.Sc. thesis *"Wykorzystanie uczenia
 maszynowego do klasyfikacji treści dezinformacyjnych"* (UMCS Lublin). This repository
 contains **only code, configurations and result artifacts — it does not include the thesis
 text.**
 
-Archived release (permanent DOI): **[10.5281/zenodo.21113726](https://doi.org/10.5281/zenodo.21113726)**
+Archived release (permanent DOI): **[10.5281/zenodo.21112976](https://doi.org/10.5281/zenodo.21112976)**
 
 ## What's here
 
