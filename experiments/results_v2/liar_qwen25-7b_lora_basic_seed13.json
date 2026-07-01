@@ -1,0 +1,64 @@
+{
+  "dataset": "liar",
+  "model": "qwen25-7b",
+  "variant": "lora_basic",
+  "seed": 13,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/lora_basic.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.28102217197701745,
+      "std": 0.0087628114871851,
+      "ci_lo": 0.2642898100242556,
+      "ci_hi": 0.2985709990089361,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.5851909421003629,
+      "std": 0.018463837859684622,
+      "ci_lo": 0.5471924930631757,
+      "ci_hi": 0.6182050917802141,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.5174611205048718,
+      "std": 0.004167636700770956,
+      "ci_lo": 0.5089344323536201,
+      "ci_hi": 0.5257780420544157,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.325367601246106,
+      "std": 0.010536334355374946,
+      "ci_lo": 0.304257528556594,
+      "ci_hi": 0.34579439252336447,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": null,
+    "ece_post_temp": null,
+    "temperature_T": null
+  },
+  "cost": {
+    "elapsed_s": 644.139,
+    "ms_per_sample": 334.444,
+    "peak_ram_mb": 4720.9,
+    "peak_vram_mb": 0.0,
+    "trainable_params": 0,
+    "n_samples_processed": 1926
+  },
+  "preds_path": "experiments/preds_v2/liar_qwen25-7b_lora_basic_seed13.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-06-28T06:06:46.902923Z",
+  "extra": {
+    "backend": "mlx",
+    "n_train": 2000,
+    "n_eval": 1926,
+    "lora_variant": "basic",
+    "train_dataset": "liar",
+    "eval_dataset": "liar",
+    "is_cross_dataset": false
+  }
+}

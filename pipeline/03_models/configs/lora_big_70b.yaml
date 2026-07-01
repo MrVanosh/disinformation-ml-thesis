@@ -1,0 +1,49 @@
+family: llm_lora
+variant: big
+task: binary_classification_via_prompt
+description: |
+  Big LoRA dla Llama-3.1-70B (TYLKO Modal H200/B200). Wariant testowy pod budżet $30:
+  zredukowane iters (800 vs 1500) i train_size (2000 vs 4000) by skontrolować koszt 1 seeda.
+  Skalowalny do pełnego recepture gdy budżet pozwoli.
+
+models:
+  - hf_repo: meta-llama/Llama-3.1-70B-Instruct
+    short_name: llama31-70b
+
+lora_config:
+  r: 32
+  lora_alpha: 64
+  lora_dropout: 0.05
+  bias: none
+  task_type: CAUSAL_LM
+  num_layers: 80          # wszystkie warstwy 70B (peft i tak celuje we wszystkie z target_modules)
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+training:
+  num_iters: 400          # 1. próba (800) dotrenowała 5h10m ale eval nie zmieścił się w 6h timeout
+                          # → 400 mieści trening+eval w budżecie i czasie (loss i tak spadł szybko)
+  batch_size: 1
+  grad_accum: 8
+  max_seq_length: 768
+  learning_rate: 5.0e-5
+  warmup_steps: 50
+  weight_decay: 0.01
+  gradient_clipping: 1.0
+  save_every: 400
+
+data_config:
+  train_size: 2000        # zredukowane (test); pełne = 4000
+  val_size: 300
+  class_balance: balanced
+
+prompt_template_id: short_binary
+applies_to: [truthseeker]
+metadata:
+  paper_section: "2.x — LoRA big 70B (Modal, headline)"

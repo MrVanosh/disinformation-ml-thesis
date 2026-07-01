@@ -1,0 +1,61 @@
+{
+  "dataset": "pl_claims",
+  "model": "qwen25-7b",
+  "variant": "zs_short",
+  "seed": 13,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/llm_zs.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.5638420006820664,
+      "std": 0.024572002429862284,
+      "ci_lo": 0.5156598552360758,
+      "ci_hi": 0.6119254378649255,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.5642260560535431,
+      "std": 0.021034383652700855,
+      "ci_lo": 0.5238992452898303,
+      "ci_hi": 0.6054824202596912,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.5897943248831234,
+      "std": 0.029016714964045467,
+      "ci_lo": 0.5343967240522416,
+      "ci_hi": 0.6497069548540136,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.6813761061946902,
+      "std": 0.022093084299713035,
+      "ci_lo": 0.6371681415929203,
+      "ci_hi": 0.7234513274336283,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": null,
+    "ece_post_temp": null,
+    "temperature_T": null
+  },
+  "cost": {
+    "elapsed_s": 247.586,
+    "ms_per_sample": 547.757,
+    "peak_ram_mb": 4729.7,
+    "peak_vram_mb": 0.0,
+    "trainable_params": 0,
+    "n_samples_processed": 452
+  },
+  "preds_path": "experiments/preds_v2/pl_claims_qwen25-7b_zs_short_seed13.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-06-28T03:50:59.290177Z",
+  "extra": {
+    "backend": "mlx",
+    "n_unparsed": 0,
+    "sample_size": 452,
+    "prompt_variant": "short"
+  }
+}

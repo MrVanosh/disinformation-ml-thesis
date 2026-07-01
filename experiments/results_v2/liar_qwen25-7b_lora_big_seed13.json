@@ -1,0 +1,68 @@
+{
+  "dataset": "liar",
+  "model": "qwen25-7b",
+  "variant": "lora_big",
+  "seed": 13,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/lora_big.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.6501261268223525,
+      "std": 0.011162854340157253,
+      "ci_lo": 0.6274601709848072,
+      "ci_hi": 0.6711592499041396,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.6535650442691296,
+      "std": 0.010128436096687062,
+      "ci_lo": 0.6332286158131715,
+      "ci_hi": 0.6727436426909916,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.6833432820091708,
+      "std": 0.01147216029409064,
+      "ci_lo": 0.6607483806803248,
+      "ci_hi": 0.7059983307092311,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.67416251298027,
+      "std": 0.010653011646717848,
+      "ci_lo": 0.6536863966770509,
+      "ci_hi": 0.6947040498442367,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": null,
+    "ece_post_temp": null,
+    "temperature_T": null
+  },
+  "cost": {
+    "elapsed_s": 2924.442,
+    "ms_per_sample": 1518.402,
+    "peak_ram_mb": 4937.6,
+    "peak_vram_mb": 10090.2,
+    "trainable_params": 80740352,
+    "n_samples_processed": 1926,
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "preds_path": "/results/preds_v2/liar_qwen25-7b_lora_big_seed13.jsonl",
+  "git_commit": "unknown",
+  "timestamp": "2026-06-29T18:15:32.712937Z",
+  "extra": {
+    "backend": "transformers_cuda",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "n_train": 4000,
+    "n_eval": 1926,
+    "n_unparsed": 0,
+    "lora_variant": "big",
+    "train_dataset": "liar",
+    "eval_dataset": "liar",
+    "is_cross_dataset": false,
+    "peak_vram_mb": 10090.2
+  }
+}

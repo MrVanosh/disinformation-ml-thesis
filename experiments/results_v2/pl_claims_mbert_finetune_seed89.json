@@ -1,0 +1,68 @@
+{
+  "dataset": "pl_claims",
+  "model": "mbert",
+  "variant": "finetune",
+  "seed": 89,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/encoder_mbert.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.7249875641998975,
+      "std": 0.024819686412206797,
+      "ci_lo": 0.6763144543787463,
+      "ci_hi": 0.7727300674947699,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.71537322969276,
+      "std": 0.024864942747321296,
+      "ci_lo": 0.6681005718122385,
+      "ci_hi": 0.7653392772771759,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.7396601837580039,
+      "std": 0.02692024877208137,
+      "ci_lo": 0.6878175089185471,
+      "ci_hi": 0.7933173710267633,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.8072323008849558,
+      "std": 0.01874323944217201,
+      "ci_lo": 0.7721238938053098,
+      "ci_hi": 0.845188053097345,
+      "n_bootstrap": 1000
+    },
+    "auc": {
+      "mean": 0.8971494070220571,
+      "std": 0.014103694290287233,
+      "ci_lo": 0.86802109673686,
+      "ci_hi": 0.9232949472919005,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": 0.13412591993017536,
+    "ece_post_temp": 0.12117211726598175,
+    "temperature_T": 1.7249575546504545
+  },
+  "cost": {
+    "elapsed_s": 171.317,
+    "ms_per_sample": 379.02,
+    "peak_ram_mb": 1861.5,
+    "peak_vram_mb": 2427.0,
+    "trainable_params": 177854978,
+    "n_samples_processed": 452
+  },
+  "preds_path": "experiments/preds_v2/pl_claims_mbert_finetune_seed89.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-06-27T22:54:37.548213Z",
+  "extra": {
+    "device": "mps",
+    "train_dataset": "pl_claims",
+    "eval_dataset": "pl_claims",
+    "is_cross_dataset": false
+  }
+}

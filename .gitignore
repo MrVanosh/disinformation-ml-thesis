@@ -1,0 +1,25 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Secrets — NEVER commit
+.env
+*.token
+*_secret*
+
+# Large / regenerable artifacts
+experiments/preds_*/
+experiments/_encoder_train_tmp/
+datasets/
+*.jsonl
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Build
+*.log

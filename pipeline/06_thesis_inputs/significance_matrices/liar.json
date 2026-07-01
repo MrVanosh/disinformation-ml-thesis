@@ -1,0 +1,1460 @@
+{
+  "bert_base/finetune": {
+    "distilbert/finetune": {
+      "chi2": 0.32666666666666666,
+      "pvalue": 0.5676284992633358,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 79,
+      "b_only_correct": 71,
+      "both_correct": 1313,
+      "both_wrong": 463,
+      "table": [
+        [
+          1313,
+          79
+        ],
+        [
+          71,
+          463
+        ]
+      ]
+    },
+    "llama31-8b/lora_big": {
+      "chi2": 2.562761506276151,
+      "pvalue": 0.10940732419546925,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 257,
+      "b_only_correct": 221,
+      "both_correct": 1135,
+      "both_wrong": 313,
+      "table": [
+        [
+          1135,
+          257
+        ],
+        [
+          221,
+          313
+        ]
+      ]
+    },
+    "llama31-8b/lora_natural_distribution": {
+      "chi2": 0.060836501901140684,
+      "pvalue": 0.8051786669413034,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 134,
+      "b_only_correct": 129,
+      "both_correct": 1258,
+      "both_wrong": 405,
+      "table": [
+        [
+          1258,
+          134
+        ],
+        [
+          129,
+          405
+        ]
+      ]
+    },
+    "lr/tfidf": {
+      "chi2": 14.778021978021979,
+      "pvalue": 0.00012093682620433107,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 269,
+      "b_only_correct": 186,
+      "both_correct": 1123,
+      "both_wrong": 348,
+      "table": [
+        [
+          1123,
+          269
+        ],
+        [
+          186,
+          348
+        ]
+      ]
+    },
+    "qwen25-7b/lora_big": {
+      "chi2": 14.468376068376068,
+      "pvalue": 0.00014253245989132764,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 339,
+      "b_only_correct": 246,
+      "both_correct": 1053,
+      "both_wrong": 288,
+      "table": [
+        [
+          1053,
+          339
+        ],
+        [
+          246,
+          288
+        ]
+      ]
+    },
+    "qwen25-7b/lora_natural_distribution": {
+      "chi2": 0.4689922480620155,
+      "pvalue": 0.4934511471996056,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 135,
+      "b_only_correct": 123,
+      "both_correct": 1257,
+      "both_wrong": 411,
+      "table": [
+        [
+          1257,
+          135
+        ],
+        [
+          123,
+          411
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 1.0922330097087378,
+      "pvalue": 0.2959769752345534,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 111,
+      "b_only_correct": 95,
+      "both_correct": 1281,
+      "both_wrong": 439,
+      "table": [
+        [
+          1281,
+          111
+        ],
+        [
+          95,
+          439
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 21.430672268907564,
+      "pvalue": 3.6685533869373953e-06,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 289,
+      "b_only_correct": 187,
+      "both_correct": 1103,
+      "both_wrong": 347,
+      "table": [
+        [
+          1103,
+          289
+        ],
+        [
+          187,
+          347
+        ]
+      ]
+    }
+  },
+  "distilbert/finetune": {
+    "bert_base/finetune": {
+      "chi2": 0.32666666666666666,
+      "pvalue": 0.5676284992633358,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 71,
+      "b_only_correct": 79,
+      "both_correct": 1313,
+      "both_wrong": 463,
+      "table": [
+        [
+          1313,
+          79
+        ],
+        [
+          71,
+          463
+        ]
+      ]
+    },
+    "llama31-8b/lora_big": {
+      "chi2": 1.512448132780083,
+      "pvalue": 0.21876590275831387,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 255,
+      "b_only_correct": 227,
+      "both_correct": 1129,
+      "both_wrong": 315,
+      "table": [
+        [
+          1129,
+          255
+        ],
+        [
+          227,
+          315
+        ]
+      ]
+    },
+    "llama31-8b/lora_natural_distribution": {
+      "chi2": 0.013289036544850499,
+      "pvalue": 0.9082247093395801,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 149,
+      "b_only_correct": 152,
+      "both_correct": 1235,
+      "both_wrong": 390,
+      "table": [
+        [
+          1235,
+          149
+        ],
+        [
+          152,
+          390
+        ]
+      ]
+    },
+    "lr/tfidf": {
+      "chi2": 12.417233560090702,
+      "pvalue": 0.0004253899291342442,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 258,
+      "b_only_correct": 183,
+      "both_correct": 1126,
+      "both_wrong": 359,
+      "table": [
+        [
+          1126,
+          258
+        ],
+        [
+          183,
+          359
+        ]
+      ]
+    },
+    "qwen25-7b/lora_big": {
+      "chi2": 11.858823529411765,
+      "pvalue": 0.0005738878701998287,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 340,
+      "b_only_correct": 255,
+      "both_correct": 1044,
+      "both_wrong": 287,
+      "table": [
+        [
+          1044,
+          340
+        ],
+        [
+          255,
+          287
+        ]
+      ]
+    },
+    "qwen25-7b/lora_natural_distribution": {
+      "chi2": 0.03214285714285714,
+      "pvalue": 0.8577144806607082,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 142,
+      "b_only_correct": 138,
+      "both_correct": 1242,
+      "both_wrong": 404,
+      "table": [
+        [
+          1242,
+          142
+        ],
+        [
+          138,
+          404
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 0.21875,
+      "pvalue": 0.6399940105774465,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 116,
+      "b_only_correct": 108,
+      "both_correct": 1268,
+      "both_wrong": 434,
+      "table": [
+        [
+          1268,
+          116
+        ],
+        [
+          108,
+          434
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 18.48076923076923,
+      "pvalue": 1.716273563594274e-05,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 281,
+      "b_only_correct": 187,
+      "both_correct": 1103,
+      "both_wrong": 355,
+      "table": [
+        [
+          1103,
+          281
+        ],
+        [
+          187,
+          355
+        ]
+      ]
+    }
+  },
+  "llama31-8b/lora_big": {
+    "bert_base/finetune": {
+      "chi2": 2.562761506276151,
+      "pvalue": 0.10940732419546925,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 221,
+      "b_only_correct": 257,
+      "both_correct": 1135,
+      "both_wrong": 313,
+      "table": [
+        [
+          1135,
+          257
+        ],
+        [
+          221,
+          313
+        ]
+      ]
+    },
+    "distilbert/finetune": {
+      "chi2": 1.512448132780083,
+      "pvalue": 0.21876590275831387,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 227,
+      "b_only_correct": 255,
+      "both_correct": 1129,
+      "both_wrong": 315,
+      "table": [
+        [
+          1129,
+          255
+        ],
+        [
+          227,
+          315
+        ]
+      ]
+    },
+    "llama31-8b/lora_natural_distribution": {
+      "chi2": 1.8480492813141685,
+      "pvalue": 0.17401044504272223,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 228,
+      "b_only_correct": 259,
+      "both_correct": 1128,
+      "both_wrong": 311,
+      "table": [
+        [
+          1128,
+          228
+        ],
+        [
+          259,
+          311
+        ]
+      ]
+    },
+    "lr/tfidf": {
+      "chi2": 4.015180265654649,
+      "pvalue": 0.04509240268427325,
+      "significant_at_005": true,
+      "significant_at_001": false,
+      "a_only_correct": 287,
+      "b_only_correct": 240,
+      "both_correct": 1069,
+      "both_wrong": 330,
+      "table": [
+        [
+          1069,
+          287
+        ],
+        [
+          240,
+          330
+        ]
+      ]
+    },
+    "qwen25-7b/lora_big": {
+      "chi2": 8.407506702412869,
+      "pvalue": 0.0037367479078972547,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 215,
+      "b_only_correct": 158,
+      "both_correct": 1141,
+      "both_wrong": 412,
+      "table": [
+        [
+          1141,
+          215
+        ],
+        [
+          158,
+          412
+        ]
+      ]
+    },
+    "qwen25-7b/lora_natural_distribution": {
+      "chi2": 1.0372549019607844,
+      "pvalue": 0.3084607696002853,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 243,
+      "b_only_correct": 267,
+      "both_correct": 1113,
+      "both_wrong": 303,
+      "table": [
+        [
+          1113,
+          243
+        ],
+        [
+          267,
+          303
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 0.6996124031007752,
+      "pvalue": 0.402913963068916,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 248,
+      "b_only_correct": 268,
+      "both_correct": 1108,
+      "both_wrong": 302,
+      "table": [
+        [
+          1108,
+          248
+        ],
+        [
+          268,
+          302
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 7.1853741496598635,
+      "pvalue": 0.007350022418701645,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 327,
+      "b_only_correct": 261,
+      "both_correct": 1029,
+      "both_wrong": 309,
+      "table": [
+        [
+          1029,
+          327
+        ],
+        [
+          261,
+          309
+        ]
+      ]
+    }
+  },
+  "llama31-8b/lora_natural_distribution": {
+    "bert_base/finetune": {
+      "chi2": 0.060836501901140684,
+      "pvalue": 0.8051786669413034,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 129,
+      "b_only_correct": 134,
+      "both_correct": 1258,
+      "both_wrong": 405,
+      "table": [
+        [
+          1258,
+          134
+        ],
+        [
+          129,
+          405
+        ]
+      ]
+    },
+    "distilbert/finetune": {
+      "chi2": 0.013289036544850499,
+      "pvalue": 0.9082247093395801,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 152,
+      "b_only_correct": 149,
+      "both_correct": 1235,
+      "both_wrong": 390,
+      "table": [
+        [
+          1235,
+          149
+        ],
+        [
+          152,
+          390
+        ]
+      ]
+    },
+    "llama31-8b/lora_big": {
+      "chi2": 1.8480492813141685,
+      "pvalue": 0.17401044504272223,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 259,
+      "b_only_correct": 228,
+      "both_correct": 1128,
+      "both_wrong": 311,
+      "table": [
+        [
+          1128,
+          228
+        ],
+        [
+          259,
+          311
+        ]
+      ]
+    },
+    "lr/tfidf": {
+      "chi2": 10.293402777777779,
+      "pvalue": 0.0013350666425591118,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 327,
+      "b_only_correct": 249,
+      "both_correct": 1060,
+      "both_wrong": 290,
+      "table": [
+        [
+          1060,
+          327
+        ],
+        [
+          249,
+          290
+        ]
+      ]
+    },
+    "qwen25-7b/lora_big": {
+      "chi2": 11.753105590062113,
+      "pvalue": 0.000607418028127318,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 366,
+      "b_only_correct": 278,
+      "both_correct": 1021,
+      "both_wrong": 261,
+      "table": [
+        [
+          1021,
+          366
+        ],
+        [
+          278,
+          261
+        ]
+      ]
+    },
+    "qwen25-7b/lora_natural_distribution": {
+      "chi2": 0.3870967741935484,
+      "pvalue": 0.5338294217441397,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 50,
+      "b_only_correct": 43,
+      "both_correct": 1337,
+      "both_wrong": 496,
+      "table": [
+        [
+          1337,
+          50
+        ],
+        [
+          43,
+          496
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 0.5291005291005291,
+      "pvalue": 0.4669852613467843,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 100,
+      "b_only_correct": 89,
+      "both_correct": 1287,
+      "both_wrong": 450,
+      "table": [
+        [
+          1287,
+          100
+        ],
+        [
+          89,
+          450
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 16.486583184257604,
+      "pvalue": 4.899556301561396e-05,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 328,
+      "b_only_correct": 231,
+      "both_correct": 1059,
+      "both_wrong": 308,
+      "table": [
+        [
+          1059,
+          328
+        ],
+        [
+          231,
+          308
+        ]
+      ]
+    }
+  },
+  "lr/tfidf": {
+    "bert_base/finetune": {
+      "chi2": 14.778021978021979,
+      "pvalue": 0.00012093682620433107,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 186,
+      "b_only_correct": 269,
+      "both_correct": 1123,
+      "both_wrong": 348,
+      "table": [
+        [
+          1123,
+          269
+        ],
+        [
+          186,
+          348
+        ]
+      ]
+    },
+    "distilbert/finetune": {
+      "chi2": 12.417233560090702,
+      "pvalue": 0.0004253899291342442,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 183,
+      "b_only_correct": 258,
+      "both_correct": 1126,
+      "both_wrong": 359,
+      "table": [
+        [
+          1126,
+          258
+        ],
+        [
+          183,
+          359
+        ]
+      ]
+    },
+    "llama31-8b/lora_big": {
+      "chi2": 4.015180265654649,
+      "pvalue": 0.04509240268427325,
+      "significant_at_005": true,
+      "significant_at_001": false,
+      "a_only_correct": 240,
+      "b_only_correct": 287,
+      "both_correct": 1069,
+      "both_wrong": 330,
+      "table": [
+        [
+          1069,
+          287
+        ],
+        [
+          240,
+          330
+        ]
+      ]
+    },
+    "llama31-8b/lora_natural_distribution": {
+      "chi2": 10.293402777777779,
+      "pvalue": 0.0013350666425591118,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 249,
+      "b_only_correct": 327,
+      "both_correct": 1060,
+      "both_wrong": 290,
+      "table": [
+        [
+          1060,
+          327
+        ],
+        [
+          249,
+          290
+        ]
+      ]
+    },
+    "qwen25-7b/lora_big": {
+      "chi2": 0.13917525773195877,
+      "pvalue": 0.7091022980755063,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 296,
+      "b_only_correct": 286,
+      "both_correct": 1013,
+      "both_wrong": 331,
+      "table": [
+        [
+          1013,
+          296
+        ],
+        [
+          286,
+          331
+        ]
+      ]
+    },
+    "qwen25-7b/lora_natural_distribution": {
+      "chi2": 8.703374777975133,
+      "pvalue": 0.0031762146939468437,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 246,
+      "b_only_correct": 317,
+      "both_correct": 1063,
+      "both_wrong": 300,
+      "table": [
+        [
+          1063,
+          246
+        ],
+        [
+          317,
+          300
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 8.981443298969072,
+      "pvalue": 0.002727351361910104,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 209,
+      "b_only_correct": 276,
+      "both_correct": 1100,
+      "both_wrong": 341,
+      "table": [
+        [
+          1100,
+          209
+        ],
+        [
+          276,
+          341
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 1.3443983402489628,
+      "pvalue": 0.2462597989538269,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 130,
+      "b_only_correct": 111,
+      "both_correct": 1179,
+      "both_wrong": 506,
+      "table": [
+        [
+          1179,
+          130
+        ],
+        [
+          111,
+          506
+        ]
+      ]
+    }
+  },
+  "qwen25-7b/lora_big": {
+    "bert_base/finetune": {
+      "chi2": 14.468376068376068,
+      "pvalue": 0.00014253245989132764,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 246,
+      "b_only_correct": 339,
+      "both_correct": 1053,
+      "both_wrong": 288,
+      "table": [
+        [
+          1053,
+          339
+        ],
+        [
+          246,
+          288
+        ]
+      ]
+    },
+    "distilbert/finetune": {
+      "chi2": 11.858823529411765,
+      "pvalue": 0.0005738878701998287,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 255,
+      "b_only_correct": 340,
+      "both_correct": 1044,
+      "both_wrong": 287,
+      "table": [
+        [
+          1044,
+          340
+        ],
+        [
+          255,
+          287
+        ]
+      ]
+    },
+    "llama31-8b/lora_big": {
+      "chi2": 8.407506702412869,
+      "pvalue": 0.0037367479078972547,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 158,
+      "b_only_correct": 215,
+      "both_correct": 1141,
+      "both_wrong": 412,
+      "table": [
+        [
+          1141,
+          215
+        ],
+        [
+          158,
+          412
+        ]
+      ]
+    },
+    "llama31-8b/lora_natural_distribution": {
+      "chi2": 11.753105590062113,
+      "pvalue": 0.000607418028127318,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 278,
+      "b_only_correct": 366,
+      "both_correct": 1021,
+      "both_wrong": 261,
+      "table": [
+        [
+          1021,
+          366
+        ],
+        [
+          278,
+          261
+        ]
+      ]
+    },
+    "lr/tfidf": {
+      "chi2": 0.13917525773195877,
+      "pvalue": 0.7091022980755063,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 286,
+      "b_only_correct": 296,
+      "both_correct": 1013,
+      "both_wrong": 331,
+      "table": [
+        [
+          1013,
+          296
+        ],
+        [
+          286,
+          331
+        ]
+      ]
+    },
+    "qwen25-7b/lora_natural_distribution": {
+      "chi2": 9.68229954614221,
+      "pvalue": 0.0018605163094043244,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 290,
+      "b_only_correct": 371,
+      "both_correct": 1009,
+      "both_wrong": 256,
+      "table": [
+        [
+          1009,
+          290
+        ],
+        [
+          371,
+          256
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 8.818320610687023,
+      "pvalue": 0.0029822100714090084,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 289,
+      "b_only_correct": 366,
+      "both_correct": 1010,
+      "both_wrong": 261,
+      "table": [
+        [
+          1010,
+          289
+        ],
+        [
+          366,
+          261
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 0.09922480620155039,
+      "pvalue": 0.7527618874278625,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 327,
+      "b_only_correct": 318,
+      "both_correct": 972,
+      "both_wrong": 309,
+      "table": [
+        [
+          972,
+          327
+        ],
+        [
+          318,
+          309
+        ]
+      ]
+    }
+  },
+  "qwen25-7b/lora_natural_distribution": {
+    "bert_base/finetune": {
+      "chi2": 0.4689922480620155,
+      "pvalue": 0.4934511471996056,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 123,
+      "b_only_correct": 135,
+      "both_correct": 1257,
+      "both_wrong": 411,
+      "table": [
+        [
+          1257,
+          135
+        ],
+        [
+          123,
+          411
+        ]
+      ]
+    },
+    "distilbert/finetune": {
+      "chi2": 0.03214285714285714,
+      "pvalue": 0.8577144806607082,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 138,
+      "b_only_correct": 142,
+      "both_correct": 1242,
+      "both_wrong": 404,
+      "table": [
+        [
+          1242,
+          142
+        ],
+        [
+          138,
+          404
+        ]
+      ]
+    },
+    "llama31-8b/lora_big": {
+      "chi2": 1.0372549019607844,
+      "pvalue": 0.3084607696002853,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 267,
+      "b_only_correct": 243,
+      "both_correct": 1113,
+      "both_wrong": 303,
+      "table": [
+        [
+          1113,
+          243
+        ],
+        [
+          267,
+          303
+        ]
+      ]
+    },
+    "llama31-8b/lora_natural_distribution": {
+      "chi2": 0.3870967741935484,
+      "pvalue": 0.5338294217441397,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 43,
+      "b_only_correct": 50,
+      "both_correct": 1337,
+      "both_wrong": 496,
+      "table": [
+        [
+          1337,
+          50
+        ],
+        [
+          43,
+          496
+        ]
+      ]
+    },
+    "lr/tfidf": {
+      "chi2": 8.703374777975133,
+      "pvalue": 0.0031762146939468437,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 317,
+      "b_only_correct": 246,
+      "both_correct": 1063,
+      "both_wrong": 300,
+      "table": [
+        [
+          1063,
+          246
+        ],
+        [
+          317,
+          300
+        ]
+      ]
+    },
+    "qwen25-7b/lora_big": {
+      "chi2": 9.68229954614221,
+      "pvalue": 0.0018605163094043244,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 371,
+      "b_only_correct": 290,
+      "both_correct": 1009,
+      "both_wrong": 256,
+      "table": [
+        [
+          1009,
+          290
+        ],
+        [
+          371,
+          256
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 0.05421686746987952,
+      "pvalue": 0.8158816457129376,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 85,
+      "b_only_correct": 81,
+      "both_correct": 1295,
+      "both_wrong": 465,
+      "table": [
+        [
+          1295,
+          85
+        ],
+        [
+          81,
+          465
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 14.723048327137546,
+      "pvalue": 0.000124514810749459,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 314,
+      "b_only_correct": 224,
+      "both_correct": 1066,
+      "both_wrong": 322,
+      "table": [
+        [
+          1066,
+          314
+        ],
+        [
+          224,
+          322
+        ]
+      ]
+    }
+  },
+  "rf/tfidf": {
+    "bert_base/finetune": {
+      "chi2": 1.0922330097087378,
+      "pvalue": 0.2959769752345534,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 95,
+      "b_only_correct": 111,
+      "both_correct": 1281,
+      "both_wrong": 439,
+      "table": [
+        [
+          1281,
+          111
+        ],
+        [
+          95,
+          439
+        ]
+      ]
+    },
+    "distilbert/finetune": {
+      "chi2": 0.21875,
+      "pvalue": 0.6399940105774465,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 108,
+      "b_only_correct": 116,
+      "both_correct": 1268,
+      "both_wrong": 434,
+      "table": [
+        [
+          1268,
+          116
+        ],
+        [
+          108,
+          434
+        ]
+      ]
+    },
+    "llama31-8b/lora_big": {
+      "chi2": 0.6996124031007752,
+      "pvalue": 0.402913963068916,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 268,
+      "b_only_correct": 248,
+      "both_correct": 1108,
+      "both_wrong": 302,
+      "table": [
+        [
+          1108,
+          248
+        ],
+        [
+          268,
+          302
+        ]
+      ]
+    },
+    "llama31-8b/lora_natural_distribution": {
+      "chi2": 0.5291005291005291,
+      "pvalue": 0.4669852613467843,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 89,
+      "b_only_correct": 100,
+      "both_correct": 1287,
+      "both_wrong": 450,
+      "table": [
+        [
+          1287,
+          100
+        ],
+        [
+          89,
+          450
+        ]
+      ]
+    },
+    "lr/tfidf": {
+      "chi2": 8.981443298969072,
+      "pvalue": 0.002727351361910104,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 276,
+      "b_only_correct": 209,
+      "both_correct": 1100,
+      "both_wrong": 341,
+      "table": [
+        [
+          1100,
+          209
+        ],
+        [
+          276,
+          341
+        ]
+      ]
+    },
+    "qwen25-7b/lora_big": {
+      "chi2": 8.818320610687023,
+      "pvalue": 0.0029822100714090084,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 366,
+      "b_only_correct": 289,
+      "both_correct": 1010,
+      "both_wrong": 261,
+      "table": [
+        [
+          1010,
+          289
+        ],
+        [
+          366,
+          261
+        ]
+      ]
+    },
+    "qwen25-7b/lora_natural_distribution": {
+      "chi2": 0.05421686746987952,
+      "pvalue": 0.8158816457129376,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 81,
+      "b_only_correct": 85,
+      "both_correct": 1295,
+      "both_wrong": 465,
+      "table": [
+        [
+          1295,
+          85
+        ],
+        [
+          81,
+          465
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 15.438034188034187,
+      "pvalue": 8.525502347117797e-05,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 277,
+      "b_only_correct": 191,
+      "both_correct": 1099,
+      "both_wrong": 359,
+      "table": [
+        [
+          1099,
+          277
+        ],
+        [
+          191,
+          359
+        ]
+      ]
+    }
+  },
+  "svm/tfidf": {
+    "bert_base/finetune": {
+      "chi2": 21.430672268907564,
+      "pvalue": 3.6685533869373953e-06,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 187,
+      "b_only_correct": 289,
+      "both_correct": 1103,
+      "both_wrong": 347,
+      "table": [
+        [
+          1103,
+          289
+        ],
+        [
+          187,
+          347
+        ]
+      ]
+    },
+    "distilbert/finetune": {
+      "chi2": 18.48076923076923,
+      "pvalue": 1.716273563594274e-05,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 187,
+      "b_only_correct": 281,
+      "both_correct": 1103,
+      "both_wrong": 355,
+      "table": [
+        [
+          1103,
+          281
+        ],
+        [
+          187,
+          355
+        ]
+      ]
+    },
+    "llama31-8b/lora_big": {
+      "chi2": 7.1853741496598635,
+      "pvalue": 0.007350022418701645,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 261,
+      "b_only_correct": 327,
+      "both_correct": 1029,
+      "both_wrong": 309,
+      "table": [
+        [
+          1029,
+          327
+        ],
+        [
+          261,
+          309
+        ]
+      ]
+    },
+    "llama31-8b/lora_natural_distribution": {
+      "chi2": 16.486583184257604,
+      "pvalue": 4.899556301561396e-05,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 231,
+      "b_only_correct": 328,
+      "both_correct": 1059,
+      "both_wrong": 308,
+      "table": [
+        [
+          1059,
+          328
+        ],
+        [
+          231,
+          308
+        ]
+      ]
+    },
+    "lr/tfidf": {
+      "chi2": 1.3443983402489628,
+      "pvalue": 0.2462597989538269,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 111,
+      "b_only_correct": 130,
+      "both_correct": 1179,
+      "both_wrong": 506,
+      "table": [
+        [
+          1179,
+          130
+        ],
+        [
+          111,
+          506
+        ]
+      ]
+    },
+    "qwen25-7b/lora_big": {
+      "chi2": 0.09922480620155039,
+      "pvalue": 0.7527618874278625,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 318,
+      "b_only_correct": 327,
+      "both_correct": 972,
+      "both_wrong": 309,
+      "table": [
+        [
+          972,
+          327
+        ],
+        [
+          318,
+          309
+        ]
+      ]
+    },
+    "qwen25-7b/lora_natural_distribution": {
+      "chi2": 14.723048327137546,
+      "pvalue": 0.000124514810749459,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 224,
+      "b_only_correct": 314,
+      "both_correct": 1066,
+      "both_wrong": 322,
+      "table": [
+        [
+          1066,
+          314
+        ],
+        [
+          224,
+          322
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 15.438034188034187,
+      "pvalue": 8.525502347117797e-05,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 191,
+      "b_only_correct": 277,
+      "both_correct": 1099,
+      "both_wrong": 359,
+      "table": [
+        [
+          1099,
+          277
+        ],
+        [
+          191,
+          359
+        ]
+      ]
+    }
+  }
+}

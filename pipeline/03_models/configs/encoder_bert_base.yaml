@@ -1,0 +1,28 @@
+model_name: bert-base-uncased
+hf_repo: google-bert/bert-base-uncased
+family: encoder
+task: binary_classification
+description: |
+  Bert-base — 12 warstw, 110M parametrów (Devlin et al. 2019).
+  Klasyczny pełny encoder, baseline drugiej linii względem DistilBERT.
+hyperparameters:
+  max_length: 128
+  num_train_epochs: 3
+  per_device_train_batch_size: 32
+  per_device_eval_batch_size: 64
+  learning_rate: 2.0e-5
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  optimizer: adamw_torch
+  gradient_clipping: 1.0
+  load_best_model_at_end: true
+  metric_for_best: f1
+  early_stopping_patience: 2
+device:
+  preferred: mps
+  fallback: cpu
+seeds: [13, 42, 71, 89, 113]
+applies_to: [liar, truthseeker]
+metadata:
+  paper_section: "2.x — Encoder fine-tuning"
+  citation: devlin2019

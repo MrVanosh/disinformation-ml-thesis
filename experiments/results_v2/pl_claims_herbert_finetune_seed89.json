@@ -1,0 +1,68 @@
+{
+  "dataset": "pl_claims",
+  "model": "herbert",
+  "variant": "finetune",
+  "seed": 89,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/encoder_herbert.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.7765058366140504,
+      "std": 0.024255381664959216,
+      "ci_lo": 0.72927610065058,
+      "ci_hi": 0.8258023469668337,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.7665819108096107,
+      "std": 0.024955902040000248,
+      "ci_lo": 0.7201042884930364,
+      "ci_hi": 0.8160814101543477,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.7903355400879015,
+      "std": 0.02628313143898077,
+      "ci_lo": 0.7396841063911642,
+      "ci_hi": 0.8418095406627426,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.8452831858407079,
+      "std": 0.017220488573817087,
+      "ci_lo": 0.8119469026548672,
+      "ci_hi": 0.8783185840707964,
+      "n_bootstrap": 1000
+    },
+    "auc": {
+      "mean": 0.9094788437782951,
+      "std": 0.013537197053201586,
+      "ci_lo": 0.8815138382268681,
+      "ci_hi": 0.9345390642029505,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": 0.14925817731537122,
+    "ece_post_temp": 0.10249801862505427,
+    "temperature_T": 1.897225012815316
+  },
+  "cost": {
+    "elapsed_s": 178.323,
+    "ms_per_sample": 394.52,
+    "peak_ram_mb": 1392.6,
+    "peak_vram_mb": 2767.6,
+    "trainable_params": 124444418,
+    "n_samples_processed": 452
+  },
+  "preds_path": "experiments/preds_v2/pl_claims_herbert_finetune_seed89.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-06-27T22:39:19.618058Z",
+  "extra": {
+    "device": "mps",
+    "train_dataset": "pl_claims",
+    "eval_dataset": "pl_claims",
+    "is_cross_dataset": false
+  }
+}

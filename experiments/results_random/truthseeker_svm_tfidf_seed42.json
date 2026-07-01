@@ -1,0 +1,63 @@
+{
+  "dataset": "truthseeker",
+  "model": "svm",
+  "variant": "tfidf",
+  "seed": 42,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/classical_rf.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.9359200470668549,
+      "std": 0.0017343894280939828,
+      "ci_lo": 0.932650678193982,
+      "ci_hi": 0.9393766126878961,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.9360586790727918,
+      "std": 0.001728616212367913,
+      "ci_lo": 0.9327732141487506,
+      "ci_hi": 0.9395233985483302,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.9358202115498727,
+      "std": 0.0017397589712223264,
+      "ci_lo": 0.9325442192085882,
+      "ci_hi": 0.9392712929169754,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.9359906114947096,
+      "std": 0.0017307304985410964,
+      "ci_lo": 0.9327889821668075,
+      "ci_hi": 0.9394962992399781,
+      "n_bootstrap": 1000
+    },
+    "auc": {
+      "mean": 0.955394231378468,
+      "std": 0.0016452937547474984,
+      "ci_lo": 0.9522877491782211,
+      "ci_hi": 0.9588826465086002,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": 0.4214812083147637,
+    "ece_post_temp": null,
+    "temperature_T": null
+  },
+  "cost": {
+    "elapsed_s": 117.693,
+    "ms_per_sample": 5.846,
+    "peak_ram_mb": 935.4,
+    "peak_vram_mb": 0.0,
+    "trainable_params": 0,
+    "n_samples_processed": 20131
+  },
+  "preds_path": "experiments/preds_random/truthseeker_svm_tfidf_seed42.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-07-01T15:15:25.022661Z",
+  "extra": {}
+}

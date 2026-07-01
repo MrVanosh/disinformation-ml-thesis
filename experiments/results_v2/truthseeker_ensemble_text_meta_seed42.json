@@ -1,0 +1,79 @@
+{
+  "dataset": "truthseeker",
+  "model": "ensemble",
+  "variant": "text_meta",
+  "seed": 42,
+  "split": "grouped_v2",
+  "config_path": null,
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.7950031588236913,
+      "std": 0.0030721501604806063,
+      "ci_lo": 0.7889484453321903,
+      "ci_hi": 0.8010104538583838,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.8033740042355889,
+      "std": 0.0030055753544177845,
+      "ci_lo": 0.7973423453998847,
+      "ci_hi": 0.8092460863500088,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.7950958763706969,
+      "std": 0.0030021428422710265,
+      "ci_lo": 0.7893360848405032,
+      "ci_hi": 0.8010530338707467,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.7968568501337584,
+      "std": 0.0030537828360358253,
+      "ci_lo": 0.7907678297000399,
+      "ci_hi": 0.803006716375434,
+      "n_bootstrap": 1000
+    },
+    "auc": {
+      "mean": 0.8526239171888308,
+      "std": 0.0029423550096574704,
+      "ci_lo": 0.8468111590715096,
+      "ci_hi": 0.8584831720810064,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": 0.341407808747287,
+    "ece_post_temp": null,
+    "temperature_T": null
+  },
+  "cost": {
+    "elapsed_s": 9.551,
+    "ms_per_sample": 0.544,
+    "peak_ram_mb": 1399.4,
+    "peak_vram_mb": 0.0,
+    "trainable_params": 0,
+    "n_samples_processed": 17569
+  },
+  "preds_path": "experiments/preds_v2/truthseeker_ensemble_text_meta_seed42.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-06-27T21:40:59.628215Z",
+  "extra": {
+    "meta_features": [
+      "BotScore",
+      "cred",
+      "followers_count",
+      "normalize_influence",
+      "favourites_count",
+      "retweets",
+      "Word count"
+    ],
+    "meta_weights": [
+      -3.905552063692345,
+      3.8982842343080666,
+      -0.1945107247200633,
+      0.187242868992443
+    ]
+  }
+}

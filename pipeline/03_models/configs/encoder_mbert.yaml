@@ -1,0 +1,27 @@
+model_name: bert-base-multilingual-cased
+hf_repo: google-bert/bert-base-multilingual-cased
+family: encoder_multilingual
+task: binary_classification
+description: |
+  mBERT — 178M parametrów, pretrenowany na 104 językach Wikipedii (Devlin et al. 2019).
+  Wybór dla EUvsDisinfo (artykuły w 12+ językach europejskich).
+hyperparameters:
+  max_length: 256  # dłuższe artykuły niż tweety
+  num_train_epochs: 2
+  per_device_train_batch_size: 16
+  per_device_eval_batch_size: 32
+  learning_rate: 3.0e-5
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  optimizer: adamw_torch
+  gradient_clipping: 1.0
+  load_best_model_at_end: true
+  metric_for_best: f1
+device:
+  preferred: mps
+  fallback: cpu
+seeds: [13, 42, 71, 89, 113]
+applies_to: [euvsdisinfo, pl_corpus]  # PL też (multilingual transfer baseline)
+metadata:
+  paper_section: "2.x — Encoder wielojęzyczny"
+  citation: devlin2019

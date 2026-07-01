@@ -1,0 +1,64 @@
+{
+  "dataset": "liar",
+  "model": "llama31-8b",
+  "variant": "lora_big",
+  "seed": 71,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/lora_big.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.44883650517915874,
+      "std": 0.011057207726148993,
+      "ci_lo": 0.42685889436370905,
+      "ci_hi": 0.47103045767240936,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.6141663488285912,
+      "std": 0.010104752553412732,
+      "ci_lo": 0.5943642760354462,
+      "ci_hi": 0.6329547127514497,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.5884511147929017,
+      "std": 0.008233635945352404,
+      "ci_lo": 0.5712967819910717,
+      "ci_hi": 0.6042338798705694,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.4538722741433022,
+      "std": 0.011041344959878118,
+      "ci_lo": 0.43146417445482865,
+      "ci_hi": 0.476116303219107,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": null,
+    "ece_post_temp": null,
+    "temperature_T": null
+  },
+  "cost": {
+    "elapsed_s": 1348.528,
+    "ms_per_sample": 700.17,
+    "peak_ram_mb": 5404.7,
+    "peak_vram_mb": 0.0,
+    "trainable_params": 0,
+    "n_samples_processed": 1926
+  },
+  "preds_path": "experiments/preds_v2/liar_llama31-8b_lora_big_seed71.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-06-29T21:46:23.294330Z",
+  "extra": {
+    "backend": "mlx",
+    "n_train": 4000,
+    "n_eval": 1926,
+    "lora_variant": "big",
+    "train_dataset": "liar",
+    "eval_dataset": "liar",
+    "is_cross_dataset": false
+  }
+}

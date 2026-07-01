@@ -1,0 +1,36 @@
+family: llm_lora
+variant: smoke
+task: binary_classification_via_prompt
+description: |
+  Minimalny config do walidacji ścieżki QLoRA (train→adapter→eval).
+  NIE do wyników — tylko smoke (20 iteracji, 4 warstwy, mały zbiór).
+
+models:
+  # Qwen jest ungated (Apache 2.0) — smoke nie wymaga akceptacji licencji Llama
+  - hf_repo: Qwen/Qwen2.5-7B-Instruct
+    mlx_repo: mlx-community/Qwen2.5-7B-Instruct-4bit
+    short_name: qwen25-7b
+
+lora_config:
+  r: 8
+  lora_alpha: 16
+  lora_dropout: 0.0
+  num_layers: 4
+  target_modules:
+    - q_proj
+    - v_proj
+
+training:
+  num_iters: 20
+  batch_size: 1
+  learning_rate: 1.0e-4
+  max_seq_length: 256
+  save_every: 20
+
+data_config:
+  train_size: 120
+  val_size: 40
+  class_balance: balanced
+
+prompt_template_id: short_binary
+applies_to: [liar]

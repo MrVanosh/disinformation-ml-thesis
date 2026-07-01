@@ -1,0 +1,42 @@
+{
+  "name": "truthseeker (random split, seed=42)",
+  "n_total": 134203,
+  "n_train": 114072,
+  "n_test": 20131,
+  "overlaps": {
+    "1. Group overlap": {
+      "status": "WYCIEK",
+      "metric": "% grup testowych obecnych też w treningu",
+      "value": "99.23% (902/909)"
+    },
+    "2. Temporal leakage": {
+      "status": "N/A",
+      "metric": "brak daty publikacji",
+      "value": "-"
+    },
+    "3. Source domain leakage": {
+      "status": "N/A",
+      "metric": "brak URL",
+      "value": "-"
+    },
+    "4. Near-duplicate leakage": {
+      "status": "ostrzeżenie",
+      "metric": "% próbek testowych z MinHash sim ≥ 0.85 do dowolnej w train (sample 5000)",
+      "value": "2.42% (~2.4% ekstrap.)"
+    },
+    "5. Label consistency in group": {
+      "status": "problem",
+      "metric": "% grup z więcej niż 1 unikalną etykietą",
+      "value": "63.50% (675/1063)"
+    }
+  },
+  "recommendations": [
+    "Zastosuj `GroupShuffleSplit` po kolumnie `group_key` — obecny split zawiera 902 grup nakładających się.",
+    "675 grup ma mieszane etykiety — sprawdź czy stosujemy 'majority label per group' lub czy faktycznie istnieją sprzeczności w danych źródłowych."
+  ],
+  "split_config": {
+    "mode": "random",
+    "test_size": 0.15,
+    "seed": 42
+  }
+}

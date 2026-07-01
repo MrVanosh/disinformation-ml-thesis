@@ -1,0 +1,68 @@
+{
+  "dataset": "euvsdisinfo",
+  "model": "mbert",
+  "variant": "finetune",
+  "seed": 42,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/encoder_mbert.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.9640019851181915,
+      "std": 0.004036354015286942,
+      "ci_lo": 0.9557476843952901,
+      "ci_hi": 0.9714825399204686,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.9636536998541229,
+      "std": 0.004076169694855301,
+      "ci_lo": 0.9551607161737311,
+      "ci_hi": 0.9713180476914816,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.9644749793570664,
+      "std": 0.0039917791265668,
+      "ci_lo": 0.9562899156801091,
+      "ci_hi": 0.9716625386654646,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.964168215613383,
+      "std": 0.004021219314077203,
+      "ci_lo": 0.9558550185873605,
+      "ci_hi": 0.9716542750929368,
+      "n_bootstrap": 1000
+    },
+    "auc": {
+      "mean": 0.9934745710084192,
+      "std": 0.0011732180262748325,
+      "ci_lo": 0.9910448117168311,
+      "ci_hi": 0.9955609400628928,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": 0.5245731492102254,
+    "ece_post_temp": 0.5067974162756875,
+    "temperature_T": 1.437402292264144
+  },
+  "cost": {
+    "elapsed_s": 815.797,
+    "ms_per_sample": 379.088,
+    "peak_ram_mb": 4432.1,
+    "peak_vram_mb": 2427.0,
+    "trainable_params": 177854978,
+    "n_samples_processed": 2152
+  },
+  "preds_path": "experiments/preds_v2/euvsdisinfo_mbert_finetune_seed42.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-06-30T19:39:51.327148Z",
+  "extra": {
+    "device": "mps",
+    "train_dataset": "euvsdisinfo",
+    "eval_dataset": "euvsdisinfo",
+    "is_cross_dataset": false
+  }
+}

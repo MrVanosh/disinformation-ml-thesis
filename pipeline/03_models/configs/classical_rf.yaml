@@ -1,0 +1,24 @@
+model_name: random_forest
+family: classical
+task: binary_classification
+description: |
+  Random Forest na TF-IDF. Nieliniowy baseline z dostępem do feature importance
+  (gini decrease). Mniej efektywny dla sparse TF-IDF niż modele liniowe.
+hyperparameters:
+  vectorizer:
+    type: tfidf
+    ngram_range: [1, 2]
+    max_features: 50000
+    sublinear_tf: true
+    min_df: 2
+  classifier:
+    n_estimators: 200
+    max_depth: null
+    min_samples_split: 2
+    min_samples_leaf: 1
+    n_jobs: -1
+    class_weight: balanced
+seeds: [13, 42, 71, 89, 113]
+metadata:
+  paper_section: "2.x — Klasyczne baseline'y"
+  citation: breiman2001

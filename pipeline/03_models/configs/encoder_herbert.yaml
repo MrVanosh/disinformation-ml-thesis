@@ -1,0 +1,28 @@
+model_name: herbert-base-cased
+hf_repo: allegro/herbert-base-cased
+family: encoder_polish
+task: binary_classification
+description: |
+  HerBERT — polski BERT 124M parametrów, trenowany na ~50GB polskich tekstów
+  (Mroczkowski et al. 2021). Dedykowany dla zadań NLP w języku polskim.
+hyperparameters:
+  max_length: 256
+  num_train_epochs: 3  # mniejszy corpus PL → więcej epok
+  per_device_train_batch_size: 16
+  per_device_eval_batch_size: 32
+  learning_rate: 2.0e-5
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  optimizer: adamw_torch
+  gradient_clipping: 1.0
+  load_best_model_at_end: true
+  metric_for_best: f1
+  early_stopping_patience: 3
+device:
+  preferred: mps
+  fallback: cpu
+seeds: [13, 42, 71, 89, 113]
+applies_to: [pl_corpus]
+metadata:
+  paper_section: "2.x — Encoder polskojęzyczny"
+  citation: mroczkowski2021

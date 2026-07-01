@@ -1,0 +1,68 @@
+{
+  "dataset": "euvsdisinfo",
+  "model": "llama31-8b",
+  "variant": "lora_big",
+  "seed": 42,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/lora_big.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.9676395072604553,
+      "std": 0.003989945244845772,
+      "ci_lo": 0.9593834099701608,
+      "ci_hi": 0.975000282290058,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.9670147090415765,
+      "std": 0.00404215506686738,
+      "ci_lo": 0.9587717387553807,
+      "ci_hi": 0.9746615783681868,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.9688576315697118,
+      "std": 0.0038514584268682837,
+      "ci_lo": 0.9609994141946803,
+      "ci_hi": 0.9760245525450794,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.9677625000000001,
+      "std": 0.003976725254527906,
+      "ci_lo": 0.9595,
+      "ci_hi": 0.9750125,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": null,
+    "ece_post_temp": null,
+    "temperature_T": null
+  },
+  "cost": {
+    "elapsed_s": 5046.745,
+    "ms_per_sample": 2523.373,
+    "peak_ram_mb": 5641.9,
+    "peak_vram_mb": 15112.5,
+    "trainable_params": 83886080,
+    "n_samples_processed": 2000,
+    "gpu": "NVIDIA H100 NVL"
+  },
+  "preds_path": "/results/preds_v2/euvsdisinfo_llama31-8b_lora_big_seed42.jsonl",
+  "git_commit": "unknown",
+  "timestamp": "2026-07-01T08:36:16.089127Z",
+  "extra": {
+    "backend": "transformers_cuda",
+    "gpu": "NVIDIA H100 NVL",
+    "n_train": 4000,
+    "n_eval": 2000,
+    "n_unparsed": 28,
+    "lora_variant": "big",
+    "train_dataset": "euvsdisinfo",
+    "eval_dataset": "euvsdisinfo",
+    "is_cross_dataset": false,
+    "peak_vram_mb": 15112.5
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "lr/tfidf": {
+    "mbert/finetune": {
+      "chi2": 29.252173913043478,
+      "pvalue": 6.35448937503137e-08,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 28,
+      "b_only_correct": 87,
+      "both_correct": 1988,
+      "both_wrong": 49,
+      "table": [
+        [
+          1988,
+          28
+        ],
+        [
+          87,
+          49
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 0.6944444444444444,
+      "pvalue": 0.40465676192728617,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 15,
+      "b_only_correct": 21,
+      "both_correct": 2001,
+      "both_wrong": 115,
+      "table": [
+        [
+          2001,
+          15
+        ],
+        [
+          21,
+          115
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 19.140625,
+      "pvalue": 1.2143247822661198e-05,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 14,
+      "b_only_correct": 50,
+      "both_correct": 2002,
+      "both_wrong": 86,
+      "table": [
+        [
+          2002,
+          14
+        ],
+        [
+          50,
+          86
+        ]
+      ]
+    }
+  },
+  "mbert/finetune": {
+    "lr/tfidf": {
+      "chi2": 29.252173913043478,
+      "pvalue": 6.35448937503137e-08,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 87,
+      "b_only_correct": 28,
+      "both_correct": 1988,
+      "both_wrong": 49,
+      "table": [
+        [
+          1988,
+          28
+        ],
+        [
+          87,
+          49
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 23.51304347826087,
+      "pvalue": 1.240697839038425e-06,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 84,
+      "b_only_correct": 31,
+      "both_correct": 1991,
+      "both_wrong": 46,
+      "table": [
+        [
+          1991,
+          84
+        ],
+        [
+          31,
+          46
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 4.888888888888889,
+      "pvalue": 0.027030076547772425,
+      "significant_at_005": true,
+      "significant_at_001": false,
+      "a_only_correct": 61,
+      "b_only_correct": 38,
+      "both_correct": 2014,
+      "both_wrong": 39,
+      "table": [
+        [
+          2014,
+          61
+        ],
+        [
+          38,
+          39
+        ]
+      ]
+    }
+  },
+  "rf/tfidf": {
+    "lr/tfidf": {
+      "chi2": 0.6944444444444444,
+      "pvalue": 0.40465676192728617,
+      "significant_at_005": false,
+      "significant_at_001": false,
+      "a_only_correct": 21,
+      "b_only_correct": 15,
+      "both_correct": 2001,
+      "both_wrong": 115,
+      "table": [
+        [
+          2001,
+          15
+        ],
+        [
+          21,
+          115
+        ]
+      ]
+    },
+    "mbert/finetune": {
+      "chi2": 23.51304347826087,
+      "pvalue": 1.240697839038425e-06,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 31,
+      "b_only_correct": 84,
+      "both_correct": 1991,
+      "both_wrong": 46,
+      "table": [
+        [
+          1991,
+          84
+        ],
+        [
+          31,
+          46
+        ]
+      ]
+    },
+    "svm/tfidf": {
+      "chi2": 11.680555555555555,
+      "pvalue": 0.0006315667182512927,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 21,
+      "b_only_correct": 51,
+      "both_correct": 2001,
+      "both_wrong": 79,
+      "table": [
+        [
+          2001,
+          21
+        ],
+        [
+          51,
+          79
+        ]
+      ]
+    }
+  },
+  "svm/tfidf": {
+    "lr/tfidf": {
+      "chi2": 19.140625,
+      "pvalue": 1.2143247822661198e-05,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 50,
+      "b_only_correct": 14,
+      "both_correct": 2002,
+      "both_wrong": 86,
+      "table": [
+        [
+          2002,
+          14
+        ],
+        [
+          50,
+          86
+        ]
+      ]
+    },
+    "mbert/finetune": {
+      "chi2": 4.888888888888889,
+      "pvalue": 0.027030076547772425,
+      "significant_at_005": true,
+      "significant_at_001": false,
+      "a_only_correct": 38,
+      "b_only_correct": 61,
+      "both_correct": 2014,
+      "both_wrong": 39,
+      "table": [
+        [
+          2014,
+          61
+        ],
+        [
+          38,
+          39
+        ]
+      ]
+    },
+    "rf/tfidf": {
+      "chi2": 11.680555555555555,
+      "pvalue": 0.0006315667182512927,
+      "significant_at_005": true,
+      "significant_at_001": true,
+      "a_only_correct": 51,
+      "b_only_correct": 21,
+      "both_correct": 2001,
+      "both_wrong": 79,
+      "table": [
+        [
+          2001,
+          21
+        ],
+        [
+          51,
+          79
+        ]
+      ]
+    }
+  }
+}

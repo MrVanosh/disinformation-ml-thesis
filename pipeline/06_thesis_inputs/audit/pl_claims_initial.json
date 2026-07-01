@@ -1,0 +1,41 @@
+{
+  "name": "pl_claims (random split, seed=42)",
+  "n_total": 3011,
+  "n_train": 2559,
+  "n_test": 452,
+  "overlaps": {
+    "1. Group overlap": {
+      "status": "OK",
+      "metric": "% grup testowych obecnych też w treningu",
+      "value": "0.00% (0/452)"
+    },
+    "2. Temporal leakage": {
+      "status": "N/A",
+      "metric": "brak prawidłowych dat",
+      "value": "-"
+    },
+    "3. Source domain leakage": {
+      "status": "wysoki",
+      "metric": "% próbek testowych z domeny obecnej w trainie",
+      "value": "100.0% (wspólnych domen: 1/1)"
+    },
+    "4. Near-duplicate leakage": {
+      "status": "OK",
+      "metric": "% próbek testowych z MinHash sim ≥ 0.85 do dowolnej w train (sample 5000)",
+      "value": "0.00% (~0.0% ekstrap.)"
+    },
+    "5. Label consistency in group": {
+      "status": "OK",
+      "metric": "% grup z więcej niż 1 unikalną etykietą",
+      "value": "0.00% (0/3011)"
+    }
+  },
+  "recommendations": [
+    "Niemal wszystkie domeny testowe są obecne w trainie — model może uczyć się 'rozpoznawania domeny' zamiast 'rozpoznawania dezinformacji'. Rozważ split po domenach (DomainAwareSplit)."
+  ],
+  "split_config": {
+    "mode": "random",
+    "test_size": 0.15,
+    "seed": 42
+  }
+}

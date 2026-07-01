@@ -1,0 +1,29 @@
+model_name: xgboost_metadata
+family: classical_metadata
+task: binary_classification
+description: |
+  XGBoost na cechach metadanowych konta z TruthSeeker (BotScore, cred,
+  followers_count, normalize_influence, favourites_count, retweets, Word count).
+  Komponent ensemble — łączy się ze stacking meta-klasyfikatorem.
+hyperparameters:
+  features:
+    - BotScore
+    - cred
+    - followers_count
+    - normalize_influence
+    - favourites_count
+    - retweets
+    - Word count
+  classifier:
+    n_estimators: 300
+    max_depth: 6
+    learning_rate: 0.1
+    objective: binary:logistic
+    eval_metric: logloss
+    tree_method: hist
+    n_jobs: -1
+seeds: [13, 42, 71, 89, 113]
+applies_to: [truthseeker]
+metadata:
+  paper_section: "2.x — Ensemble z metadanymi"
+  citation: chen2016xgboost

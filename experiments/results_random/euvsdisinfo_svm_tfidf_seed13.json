@@ -1,0 +1,63 @@
+{
+  "dataset": "euvsdisinfo",
+  "model": "svm",
+  "variant": "tfidf",
+  "seed": 13,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/classical_svm.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.9614451979800503,
+      "std": 0.004238476713805542,
+      "ci_lo": 0.9530655805220367,
+      "ci_hi": 0.969587562386286,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.9615436250462562,
+      "std": 0.004234177308036544,
+      "ci_lo": 0.9529972910630459,
+      "ci_hi": 0.969703034882808,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.9613826117394088,
+      "std": 0.004267427047421548,
+      "ci_lo": 0.9528532780306553,
+      "ci_hi": 0.9694801928779937,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.9617756618671621,
+      "std": 0.004203855090801769,
+      "ci_lo": 0.9535531816070599,
+      "ci_hi": 0.969809568044589,
+      "n_bootstrap": 1000
+    },
+    "auc": {
+      "mean": 0.9921007882566023,
+      "std": 0.0016033622706594002,
+      "ci_lo": 0.9886848136502614,
+      "ci_hi": 0.9949760215495129,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": 0.4748769007034037,
+    "ece_post_temp": null,
+    "temperature_T": null
+  },
+  "cost": {
+    "elapsed_s": 24.043,
+    "ms_per_sample": 11.167,
+    "peak_ram_mb": 1418.9,
+    "peak_vram_mb": 0.0,
+    "trainable_params": 0,
+    "n_samples_processed": 2153
+  },
+  "preds_path": "experiments/preds_random/euvsdisinfo_svm_tfidf_seed13.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-07-01T15:20:42.781792Z",
+  "extra": {}
+}

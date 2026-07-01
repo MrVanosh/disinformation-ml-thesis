@@ -1,0 +1,70 @@
+family: llm_lora
+variant: basic
+task: binary_classification_via_prompt
+description: |
+  Basic LoRA — 8 ostatnich warstw, rank 16, 400 iteracji.
+  Stanowi baseline "naiwna konfiguracja LoRA" w hipotezie H4.
+
+models:
+  # Tier 1 (must-have)
+  - hf_repo: meta-llama/Llama-3.1-8B-Instruct
+    short_name: llama31-8b
+    mlx_repo: mlx-community/Meta-Llama-3.1-8B-Instruct-4bit
+    tier: 1
+    preferred_compute: local_mps
+  - hf_repo: Qwen/Qwen2.5-7B-Instruct
+    short_name: qwen25-7b
+    mlx_repo: mlx-community/Qwen2.5-7B-Instruct-4bit
+    tier: 1
+    preferred_compute: local_mps
+
+  # Tier 2 (stretch, basic LoRA 14B zmieści się lokalnie)
+  - hf_repo: Qwen/Qwen2.5-14B-Instruct
+    short_name: qwen25-14b
+    mlx_repo: mlx-community/Qwen2.5-14B-Instruct-4bit
+    tier: 2
+    preferred_compute: local_mps
+
+lora_config:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  bias: none
+  task_type: CAUSAL_LM
+  num_layers: 8  # ostatnie 8 warstw
+  target_modules:
+    - q_proj
+    - v_proj
+    # tylko Q i V dla basic — minimalna parametryzacja
+  layers_to_transform: "last_8"  # interpretowane przez runner: ostatnie 8 warstw transformera
+
+training:
+  num_iters: 400
+  batch_size: 1
+  grad_accum: 4
+  max_seq_length: 512
+  learning_rate: 1.0e-4
+  optimizer: adamw
+  warmup_steps: 50
+  weight_decay: 0.0
+  gradient_clipping: 1.0
+  save_every: 100
+
+data_config:
+  train_size: 2000  # zbalansowany subset
+  val_size: 300
+  class_balance: "balanced"   # 50/50 dla TS/LIAR; dla LIAR potem osobny LoRA-natural
+  augmentation: none
+
+quantization:
+  load_in_4bit: true
+  bnb_4bit_compute_dtype: float16
+  bnb_4bit_quant_type: nf4
+
+prompt_template_id: short_binary
+
+seeds: [13, 42, 71, 89, 113]
+applies_to: [liar, truthseeker, euvsdisinfo]
+metadata:
+  paper_section: "2.x — LoRA basic"
+  citations: [hu2022, dettmers2023]

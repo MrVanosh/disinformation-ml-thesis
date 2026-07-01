@@ -1,0 +1,61 @@
+{
+  "dataset": "truthseeker",
+  "model": "qwen25-14b",
+  "variant": "zs_short",
+  "seed": 71,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/llm_zs.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.3875179411619006,
+      "std": 0.008858287971811384,
+      "ci_lo": 0.36975947682739213,
+      "ci_hi": 0.4049541318324473,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.4645864340146263,
+      "std": 0.02166950378698261,
+      "ci_lo": 0.42242437812754813,
+      "ci_hi": 0.5068319328493337,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.49054323394015,
+      "std": 0.0058136258358568805,
+      "ci_lo": 0.47934653774603986,
+      "ci_hi": 0.5018458719505591,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.5163475,
+      "std": 0.011005702783102955,
+      "ci_lo": 0.4949875,
+      "ci_hi": 0.5365,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": null,
+    "ece_post_temp": null,
+    "temperature_T": null
+  },
+  "cost": {
+    "elapsed_s": 1622.586,
+    "ms_per_sample": 811.293,
+    "peak_ram_mb": 977.9,
+    "peak_vram_mb": 0.0,
+    "trainable_params": 0,
+    "n_samples_processed": 2000
+  },
+  "preds_path": "experiments/preds_v2/truthseeker_qwen25-14b_zs_short_seed71.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-06-29T19:40:25.885773Z",
+  "extra": {
+    "backend": "mlx",
+    "n_unparsed": 0,
+    "sample_size": 2000,
+    "prompt_variant": "short"
+  }
+}

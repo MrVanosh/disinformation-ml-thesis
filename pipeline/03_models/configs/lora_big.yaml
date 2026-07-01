@@ -1,0 +1,71 @@
+family: llm_lora
+variant: big
+task: binary_classification_via_prompt
+description: |
+  Big LoRA — wszystkie 32 warstwy (Llama 3.1 8B / Qwen 2.5 7B mają po 32 layers),
+  rank 32, alpha 64, 1500 iteracji. Hipoteza H5: standardowa konfiguracja LoRA
+  jest niewystarczająca dla modeli 7B+.
+
+models:
+  - hf_repo: meta-llama/Llama-3.1-8B-Instruct
+    short_name: llama31-8b
+    mlx_repo: mlx-community/Meta-Llama-3.1-8B-Instruct-4bit
+  - hf_repo: Qwen/Qwen2.5-7B-Instruct
+    short_name: qwen25-7b
+    mlx_repo: mlx-community/Qwen2.5-7B-Instruct-4bit
+
+lora_config:
+  r: 32
+  lora_alpha: 64
+  lora_dropout: 0.05
+  bias: none
+  task_type: CAUSAL_LM
+  num_layers: 32  # wszystkie
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj  # MLP też
+    - up_proj
+    - down_proj
+  layers_to_transform: "all"
+
+training:
+  num_iters: 1500
+  batch_size: 1
+  grad_accum: 8
+  max_seq_length: 768
+  learning_rate: 5.0e-5
+  optimizer: adamw
+  warmup_steps: 100
+  weight_decay: 0.01
+  gradient_clipping: 1.0
+  save_every: 250
+  early_stopping_patience: 3  # na val F1
+
+data_config:
+  train_size: 4000  # więcej dla większej adaptacji
+  val_size: 500
+  class_balance: "balanced"
+  augmentation: none
+
+quantization:
+  load_in_4bit: true
+  bnb_4bit_compute_dtype: float16
+  bnb_4bit_quant_type: nf4
+
+prompt_template_id: short_binary
+
+# Big LoRA na M4 Pro = ~100min/run × 5 seedów × 6 model-dataset combos = ~50h
+# → fallback na Modal H100 dla equal parallelism
+preferred_compute:
+  local_threshold_min: 60  # jeśli local >60min, deleguj do Modal
+  modal_gpu: H100
+  modal_timeout_min: 90
+
+seeds: [13, 42, 71, 89, 113]
+applies_to: [liar, truthseeker, euvsdisinfo]
+metadata:
+  paper_section: "2.x — LoRA big (kontrybucja K1)"
+  citations: [hu2022, dettmers2023]

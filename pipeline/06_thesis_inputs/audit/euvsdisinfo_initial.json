@@ -1,0 +1,44 @@
+{
+  "name": "euvsdisinfo (random split, seed=42)",
+  "n_total": 12123,
+  "n_train": 10304,
+  "n_test": 1819,
+  "overlaps": {
+    "1. Group overlap": {
+      "status": "WYCIEK",
+      "metric": "% grup testowych obecnych też w treningu",
+      "value": "58.98% (926/1570)"
+    },
+    "2. Temporal leakage": {
+      "status": "uwaga",
+      "metric": "% próbek testowych z datą < max(train)",
+      "value": "100.0% (train_max=2023-12-07, test_min=2015-02-12)"
+    },
+    "3. Source domain leakage": {
+      "status": "wysoki",
+      "metric": "% próbek testowych z domeny obecnej w trainie",
+      "value": "88.3% (wspólnych domen: 401/605)"
+    },
+    "4. Near-duplicate leakage": {
+      "status": "WYCIEK",
+      "metric": "% próbek testowych z MinHash sim ≥ 0.85 do dowolnej w train (sample 5000)",
+      "value": "6.87% (~6.9% ekstrap.)"
+    },
+    "5. Label consistency in group": {
+      "status": "problem",
+      "metric": "% grup z więcej niż 1 unikalną etykietą",
+      "value": "16.86% (1121/6650)"
+    }
+  },
+  "recommendations": [
+    "Zastosuj `GroupShuffleSplit` po kolumnie `group_key` — obecny split zawiera 926 grup nakładających się.",
+    "Większość testowych próbek ma datę wcześniejszą niż max(train) — rozważ `TimeSeriesSplit` lub jawne odcięcie po dacie.",
+    "≥5% próbek testowych ma near-duplicate w trainie (Jaccard ≥ 0.85). Wykonaj dedup MinHash przed splittingiem.",
+    "1121 grup ma mieszane etykiety — sprawdź czy stosujemy 'majority label per group' lub czy faktycznie istnieją sprzeczności w danych źródłowych."
+  ],
+  "split_config": {
+    "mode": "random",
+    "test_size": 0.15,
+    "seed": 42
+  }
+}

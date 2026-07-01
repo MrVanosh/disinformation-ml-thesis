@@ -1,0 +1,65 @@
+family: llm_zero_shot
+task: binary_classification_via_prompt
+description: |
+  Zero-shot inference dla LLM (Llama 3.1 8B Instruct, Qwen 2.5 7B Instruct)
+  w kwantyzacji 4-bitowej. Klasyfikacja przez prompt + parsowanie odpowiedzi.
+
+models:
+  # Tier 1 (must-have, lokalnie M4 Pro)
+  - hf_repo: meta-llama/Llama-3.1-8B-Instruct
+    mlx_repo: mlx-community/Meta-Llama-3.1-8B-Instruct-4bit
+    short_name: llama31-8b
+    tier: 1
+    preferred_compute: local_mps
+  - hf_repo: Qwen/Qwen2.5-7B-Instruct
+    mlx_repo: mlx-community/Qwen2.5-7B-Instruct-4bit
+    short_name: qwen25-7b
+    tier: 1
+    preferred_compute: local_mps
+
+  # Tier 2 (stretch, lokalnie 14B 4-bit ~10GB VRAM)
+  - hf_repo: Qwen/Qwen2.5-14B-Instruct
+    mlx_repo: mlx-community/Qwen2.5-14B-Instruct-4bit
+    short_name: qwen25-14b
+    tier: 2
+    preferred_compute: local_mps
+
+  # Tier 3 (headline, Modal H100)
+  - hf_repo: meta-llama/Llama-3.1-70B-Instruct
+    short_name: llama31-70b
+    tier: 3
+    preferred_compute: modal_h100
+    seeds_override: [13, 42, 71]  # 3 zamiast 5 — budżet
+    sample_size_override:  # tylko 2 datasety
+      truthseeker: 1500
+      euvsdisinfo: 1000
+    quantization: nf4
+
+prompt_variants:
+  - short_binary   # 1-tokenowa odpowiedź TRUE/FALSE
+  - cot            # Chain-of-Thought "explain then label"
+
+generation:
+  max_tokens: 8         # dla short_binary
+  cot_max_tokens: 256   # dla cot
+  temperature: 0.0      # deterministic
+  top_p: 1.0
+  stop_strings: ["\n\n", "###"]
+
+inference:
+  batch_size: 1  # mlx_lm nie wspiera batchu w prostym API
+  device:
+    preferred: mps
+    fallback_cloud: modal_h100  # gdy lokalnie za wolne
+
+# Sample size per dataset (zero-shot, full test set gdy ≤ 2000)
+sample_sizes:
+  liar: 1283        # pełny test
+  truthseeker: 2000  # stratified sample (5 seedów na różnych sample!)
+  euvsdisinfo: 1000
+  pl_corpus: 500    # cały lub stratified
+
+seeds: [13, 42, 71, 89, 113]
+metadata:
+  paper_section: "2.x — LLM zero-shot"
+  citations: [touvron2023llama, qwen25]

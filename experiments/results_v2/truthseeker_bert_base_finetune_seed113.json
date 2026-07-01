@@ -1,0 +1,68 @@
+{
+  "dataset": "truthseeker",
+  "model": "bert_base",
+  "variant": "finetune",
+  "seed": 113,
+  "split": "grouped_v2",
+  "config_path": "pipeline/03_models/configs/encoder_bert_base.yaml",
+  "data_manifest_sha": null,
+  "metrics": {
+    "f1": {
+      "mean": 0.7764303446212483,
+      "std": 0.0030749854292172517,
+      "ci_lo": 0.7703299151145054,
+      "ci_hi": 0.7822414928248373,
+      "n_bootstrap": 1000
+    },
+    "precision": {
+      "mean": 0.7739296024592364,
+      "std": 0.0030526149361898495,
+      "ci_lo": 0.7679985449211097,
+      "ci_hi": 0.7797037302438413,
+      "n_bootstrap": 1000
+    },
+    "recall": {
+      "mean": 0.7830943624952071,
+      "std": 0.003040948363298151,
+      "ci_lo": 0.7769691949701061,
+      "ci_hi": 0.7889956366492396,
+      "n_bootstrap": 1000
+    },
+    "accuracy": {
+      "mean": 0.7821587969456132,
+      "std": 0.003015907176751451,
+      "ci_lo": 0.7762700638927847,
+      "ci_hi": 0.7880123110487768,
+      "n_bootstrap": 1000
+    },
+    "auc": {
+      "mean": 0.8465478681993522,
+      "std": 0.0028876351232427076,
+      "ci_lo": 0.8410495399583048,
+      "ci_hi": 0.8524006927931389,
+      "n_bootstrap": 1000
+    }
+  },
+  "calibration": {
+    "ece_pre": 0.3411175434252041,
+    "ece_post_temp": 0.25063322622272544,
+    "temperature_T": 2.283630292197123
+  },
+  "cost": {
+    "elapsed_s": 1403.549,
+    "ms_per_sample": 72.908,
+    "peak_ram_mb": 2752.9,
+    "peak_vram_mb": 2355.9,
+    "trainable_params": 109483778,
+    "n_samples_processed": 19251
+  },
+  "preds_path": "experiments/preds_v2/truthseeker_bert_base_finetune_seed113.jsonl",
+  "git_commit": "3bda4457c1cc03871c6496ea2af2c4e60872accf",
+  "timestamp": "2026-06-28T01:44:58.636062Z",
+  "extra": {
+    "device": "mps",
+    "train_dataset": "truthseeker",
+    "eval_dataset": "truthseeker",
+    "is_cross_dataset": false
+  }
+}

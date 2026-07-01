@@ -1,0 +1,39 @@
+{
+  "name": "liar (random split, seed=42)",
+  "n_total": 12836,
+  "n_train": 10910,
+  "n_test": 1926,
+  "overlaps": {
+    "1. Group overlap": {
+      "status": "OK",
+      "metric": "% grup testowych obecnych też w treningu",
+      "value": "0.00% (0/1926)"
+    },
+    "2. Temporal leakage": {
+      "status": "N/A",
+      "metric": "brak daty publikacji",
+      "value": "-"
+    },
+    "3. Source domain leakage": {
+      "status": "N/A",
+      "metric": "brak URL",
+      "value": "-"
+    },
+    "4. Near-duplicate leakage": {
+      "status": "OK",
+      "metric": "% próbek testowych z MinHash sim ≥ 0.85 do dowolnej w train (sample 5000)",
+      "value": "0.21% (~0.2% ekstrap.)"
+    },
+    "5. Label consistency in group": {
+      "status": "OK",
+      "metric": "% grup z więcej niż 1 unikalną etykietą",
+      "value": "0.00% (0/12836)"
+    }
+  },
+  "recommendations": [],
+  "split_config": {
+    "mode": "random",
+    "test_size": 0.15,
+    "seed": 42
+  }
+}
